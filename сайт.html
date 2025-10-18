@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Слово дня — Англійська</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <div class="logo">EN</div>
+      <div>
+        <h1>Слово дня — Англійська</h1>
+        <p class="lead">Кожен день — нове слово!</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="grid">
+        <div>
+          <div class="panel" id="wordPanel">
+            <div class="muted">Слово дня</div>
+            <div class="wordRow" style="margin-top:8px">
+              <div>
+                <div class="word" id="wordText">—</div>
+                <div class="transcr" id="wordTranscr">—</div>
+              </div>
+              <div style="margin-left:auto;display:flex;gap:8px;">
+                <button id="speakBtn" class="btn btn-accent">🔊 Послухати</button>
+                <button id="testBtn" class="btn btn-green">✅ Пройти тест</button>
+              </div>
+            </div>
+            <div class="example" id="wordExample">—</div>
+            <div class="example-trans" id="wordExampleTrans">—</div>
+            <div class="muted" id="wordTranslation">—</div>
+            <div class="controls">
+              <button id="repeatBtn" class="btn btn-accent">🔁 Додати в повторення</button>
+              <button id="showRepeats" class="btn btn-red">🛑 Слова для повторення</button>
+            </div>
+          </div>
+
+          <div id="testArea" style="display:none;margin-top:14px">
+            <div class="panel">
+              <h3 style="margin:0 0 6px">Тест — 2 питання</h3>
+              <div id="questions"></div>
+              <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:8px">
+                <button id="submitTest" class="btn btn-accent">Перевірити</button>
+                <button id="cancelTest" class="smallbtn">Скасувати</button>
+              </div>
+              <div id="resultArea"></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="panel">
+            <div class="muted">Твоя статистика</div>
+            <div class="stats" id="statsBox"></div>
+            <div style="margin-top:12px">
+              <button id="resetStats" class="btn btn-red">🗑️ Скинути статистику</button>
+            </div>
+            <div style="margin-top:12px">
+              <button id="showAnalysisBtn" class="btn btn-yellow" style="display:none">🔍 Показати розбір</button>
+            </div>
+            <div style="margin-top:14px" id="repeatsList"></div>
+          </div>
+
+          <div style="margin-top:14px" class="panel">
+            <div class="muted">Порада</div>
+            <ul style="margin:8px 0 0 18px;color:var(--muted)">
+              <li>Помилятися — це нормально.</li>
+              <li>Головне — практика!</li>
+            </ul>
+          </div>
+
+          <div id="analysisPanel" style="margin-top:14px" class="panel">
+            <h4>Розбір відповідей</h4>
+            <div id="analysisContent"></div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <small>Дані зберігаються локально в браузері. Для синхронізації потрібен сервер.</small>
+      </footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
